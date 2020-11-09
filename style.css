@@ -51,11 +51,24 @@ img {
 
 /* table_list */
 
-.list_element {
-  margin-top: 20px;
+.table_list h5 {
+  text-align: left;
+  margin-top: 10px;
+  font-size: 15px;
 }
 
-.list_element h5 {
-  font-size: 15px;
+.list_element {
+  margin-top: 20px;
   text-align: left;
+  border: 1px solid rgb(236, 229, 229);
+  border-radius: 5px;
+  padding: 15px 10px;
+}
+
+.list_element button {
+  width: 100px;
+  height: 30px;
+  background-color: rgb(42, 42, 182);
+  color: cornsilk;
+  border-radius: 10px;
 }
