@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>NOTE TAKER APP</title>
+  </head>
+  <body>
+    <div class="box">
+      <h1>Note Taker</h1>
+      <span>Add A New Note:</span>
+      <div class="add_form">
+        <form class="add_note">
+          <label for="note">Note:</label>
+          <textarea
+            id="note"
+            name="note"
+            cols="100"
+            rows="3"
+            placeholder="Write your note here"
+          ></textarea>
+          <button type="submit" class="add_note_btn">Add Note</button>
+        </form>
+      </div>
+
+      <div class="table_list">
+        <div class="list_element">
+          <h5>No notes added yet!</h5>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
