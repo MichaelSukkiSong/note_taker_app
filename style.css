@@ -51,10 +51,17 @@ img {
 
 /* table_list */
 
+.table_list {
+  overflow: hidden;
+}
+
 .table_list h5 {
   text-align: left;
   margin-top: 10px;
   font-size: 15px;
+  border: 1px solid rgb(236, 229, 229);
+  border-radius: 5px;
+  padding: 5px 5px;
 }
 
 .list_element {
@@ -63,6 +70,7 @@ img {
   border: 1px solid rgb(236, 229, 229);
   border-radius: 5px;
   padding: 15px 10px;
+  float: left;
 }
 
 .list_element button {
