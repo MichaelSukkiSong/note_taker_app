@@ -86,3 +86,9 @@ document.querySelector(".table_list").addEventListener("click", (e) => {
 });
 
 /* modal close button */
+
+document.querySelector("body").addEventListener("click", (e) => {
+  if (e.target.matches(".modal-content span")) {
+    document.querySelector(".modal").style.display = "none";
+  }
+});
