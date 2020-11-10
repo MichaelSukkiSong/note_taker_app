@@ -86,9 +86,15 @@ document.querySelector(".table_list").addEventListener("click", (e) => {
 });
 
 /* modal close button */
-
+// clicking on span tag
 document.querySelector("body").addEventListener("click", (e) => {
   if (e.target.matches(".modal-content span")) {
+    document.querySelector(".modal").style.display = "none";
+  }
+});
+// clikcing on windows
+window.addEventListener("click", (e) => {
+  if (e.target.matches(".modal")) {
     document.querySelector(".modal").style.display = "none";
   }
 });
