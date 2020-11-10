@@ -43,7 +43,7 @@ const controlAdd = () => {
     <div class="list_element">
         <span>Note 1</span>
         <p>${note}</p>
-        <button>View Detail</button>
+        <button id="viewDetail-btn">View Detail</button>
     </div>
   `;
   document.querySelector(".table_list").insertAdjacentHTML("beforeend", markup);
@@ -64,4 +64,25 @@ document.querySelector(".add_note").addEventListener("submit", (e) => {
 
 window.addEventListener("load", JudgeNumOfNotesAndDisplaySentence);
 
-/* detail button */
+/* view_detail button */
+
+document.querySelector(".table_list").addEventListener("click", (e) => {
+  if (e.target.matches("#viewDetail-btn")) {
+    // 1) get note from the element
+    const note = e.target.parentNode.querySelector("p").textContent;
+    // 2) display in modal
+    console.log(note);
+    const modal_markup = `
+    <div class="modal">
+        <div class="modal-content">
+        <span class="close_btn">&times;</span>
+        <p>${note}</p>
+        </div>
+    </div>
+    `;
+    document.querySelector(".box").insertAdjacentHTML("afterend", modal_markup);
+    document.querySelector(".modal").style.display = "block";
+  }
+});
+
+/* modal close button */
