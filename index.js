@@ -102,9 +102,9 @@ window.addEventListener("click", (e) => {
     closeModal();
   }
 });
-// "esc" keypress event
+// "esc" keydown event
 document.addEventListener("keydown", (e) => {
-  if (e.keyCode === 27) {
+  if (e.key === "Escape") {
     closeModal();
   }
 });
