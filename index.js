@@ -53,6 +53,10 @@ const controlAdd = () => {
   JudgeNumOfNotesAndChangeWidthOfListelement();
 };
 
+const closeModal = () => {
+  document.querySelector(".modal").style.display = "none";
+};
+
 /* add button */
 
 document.querySelector(".add_note").addEventListener("submit", (e) => {
@@ -89,12 +93,18 @@ document.querySelector(".table_list").addEventListener("click", (e) => {
 // clicking on span tag
 document.querySelector("body").addEventListener("click", (e) => {
   if (e.target.matches(".modal-content span")) {
-    document.querySelector(".modal").style.display = "none";
+    closeModal();
   }
 });
 // clikcing on windows
 window.addEventListener("click", (e) => {
   if (e.target.matches(".modal")) {
-    document.querySelector(".modal").style.display = "none";
+    closeModal();
+  }
+});
+// "esc" keypress event
+document.addEventListener("keydown", (e) => {
+  if (e.keyCode === 27) {
+    closeModal();
   }
 });
